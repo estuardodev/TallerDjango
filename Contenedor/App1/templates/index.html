@@ -1,0 +1,34 @@
+{% load static %}
+<!-- Necesitas {% load static %} para poder cargar los archivos estáticos-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller</title>
+    <link rel="stylesheet" href="{% static "estilos.css" %}">
+    <!-- Necesitas {% static "" %} para poder cargar un archivo estático-->
+</head>
+<body>
+    <h1>Hola Comunidad</h1>
+    <br>
+    <p>Hola, ¿cómo están? Espero que estén bien.</p>
+    <hr>
+    <ul>
+        {% for i in objeto %}
+            <li><a href="autor/{{ i.id }}">{{ i.nombre }}</a></li> 
+            <ul>
+                {% for u in i.profesion.all %}
+                    <li>{{ u.nombre }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+
+    {% if objeto %}
+        <h2>TENEMOS EL OBJETO</h2>
+    {% else %}
+        <h2>NO TENEMOS EL OBJETO</h2>
+    {% endif %}
+    <script src="{% static "script.js" %}"></script>
+</body>
