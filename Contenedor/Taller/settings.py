@@ -27,7 +27,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Apps Propias
-    'App1.apps.App1Config'
+    'App1.apps.App1Config',
+    'mi_api',
+
+    # Aplicaciones de Terceros
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -117,3 +121,13 @@ STATIC_URL = 'static/' # Como se identificará la ruta de los archivos estático
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configuración de Rest Framework
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
