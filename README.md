@@ -22,8 +22,8 @@
 
 ## Redes
 
-- Taller Djando desde cero (Video): **Proximamente**
-- Taller de APIs en Django (Video): **Proximamente**
+- Taller Djando desde cero (Video): [YouTube](https://www.youtube.com/watch?v=P-6AioZhfMc)
+- Taller de APIs en Django (Video): [YouTube](https://www.youtube.com/watch?v=UaMix8HaBb4)
 - Discord: https://discord.gg/mouredev
 - MoureDev: https://twitch.tv/mouredev
 - Flavio: https://github.com/ffespechen
